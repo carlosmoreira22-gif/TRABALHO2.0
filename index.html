@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Futebol Brasileiro 2026</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <h1>Painel Brasileirão & Copas 2026</h1>
+    <p>Apenas times brasileiros • Atualizado em tempo real</p>
+</header>
+
+<div class="container">
+    <div class="header-actions">
+        <div class="live-indicator">🔴 DADOS EM TEMPO REAL (MOMENTO EXATO)</div>
+        <button class="refresh-btn" onclick="fetchData()">🔄 Forçar Atualização Agora</button>
+    </div>
+
+    <div class="tabs">
+        <button class="tab-btn active" id="btn-tabela" onclick="switchTab('tabela')">Tabela Brasileirão</button>
+        <button class="tab-btn" id="btn-jogos" onclick="switchTab('jogos')">Próximos Jogos (BR)</button>
+    </div>
+
+    <div id="sec-tabela" class="card">
+        <h2>Classificação Série A - 2026</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Pos</th>
+                        <th>Time</th>
+                        <th>P</th>
+                        <th>J</th>
+                        <th>V</th>
+                        <th>E</th>
+                        <th>D</th>
+                        <th>SG</th>
+                    </tr>
+                </thead>
+                <tbody id="tabela-body">
+                    <tr><td colspan="8">Carregando dados ao vivo...</td></tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <div id="sec-jogos" class="card" style="display: none;">
+        <h2>Próximos Confrontos de Times Brasileiros</h2>
+        <div class="game-list" id="jogos-container">
+            </div>
+    </div>
+</div>
+
+<script href="script.js" src="script.js"></script>
+</body>
+</html>
